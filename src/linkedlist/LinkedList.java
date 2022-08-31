@@ -48,6 +48,16 @@ public class LinkedList {
 	public void pop() {
 		this.head = this.head.next;
 	}
+	
+	//Pop last method
+	public void popLast()  {
+		Node tempNode = head;
+		while(!tempNode.next.equals(tail)) {
+			tempNode = tempNode.next;
+		}
+		tail = tempNode;
+		tempNode.next = null;
+	}
 		
 	//To Insert Data Btw elements
 	public void insertBetween(Node prevNode, Node newNode) {

@@ -50,10 +50,19 @@ public class ListMain {
 	        list.insertBetween(firNode, newNode);
 		 	System.out.println("After Insertion");
 	        list.show();
+	        break;
 		case 5 :
+			//Use Insert Data
 			 list.pop();
-			 list.show();		}
+			 list.show();
+			 break;
+		case 6:
+			//Use Append Data
+				 list.popLast();
+				 list.show();
+				 break;
 		}
+	}
 	}
 	
 	public static void welcome() {
