@@ -22,13 +22,14 @@ public class ListMain {
 		LinkedList list = new LinkedList();
 		while(true) {
 		System.out.println("\n");
-		System.out.println("Please Select 1.Insert Data 2.Append Data");
+		System.out.println("Please Select 1.Insert Data 2.Append Data 4.Insert In btw"
+				+ " 5.Delete First");
 		int option = sc.nextInt();
 		switch(option) {
 		case 1:
 			list.insert(56);
 			list.insert(30);
-			list.insert(70);
+			list.insert(7);
 			System.out.println("Data Added in List \n");
 			list.show();
 			break;
@@ -49,7 +50,9 @@ public class ListMain {
 	        list.insertBetween(firNode, newNode);
 		 	System.out.println("After Insertion");
 	        list.show();
-		}
+		case 5 :
+			 list.pop();
+			 list.show();		}
 		}
 	}
 	
