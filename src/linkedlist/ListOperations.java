@@ -11,12 +11,11 @@ public class ListOperations {
 		 * Calling the Methods from LinkedList Class
 		 * inserting data one by one in add Data Method
 		 * print the list
-		 * return the list values for further use
 		 */
 		LinkedList list = new LinkedList();
-		list.addFirst(56);
-		list.addFirst(30);
-		list.addFirst(70);
+		list.insert(56);
+		list.insert(30);
+		list.insert(70);
 		System.out.println("Data Added in List \n");
 		list.show();
 

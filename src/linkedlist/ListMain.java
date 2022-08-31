@@ -17,6 +17,7 @@ public class ListMain {
 		welcome();
 		ListOperations operation = new ListOperations();
 		operation.addData();
+		System.out.println("\n");
 	}
 	
 	public static void welcome() {

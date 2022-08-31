@@ -4,9 +4,9 @@ package linkedlist;
  * @author Veer.singa
  */
 public class LinkedList {
-	Node head;
+	Node head,tail;
 	//For Adding Data at First Node
-	public void addFirst(int data) {
+	public Node insert(int data) {
 		/*
 		 * created and Object of Class Node Passing Data.
 		 * Created IF Else Condition
@@ -22,21 +22,27 @@ public class LinkedList {
 		}
 		else{
 	         Node temp = head;  
-	         head = newNode;
-	         newNode.next = temp;
-	    }	    
+	         while(temp.next != null) {
+					temp = temp.next;
+				}
+				temp.next = newNode;
+			}
+			return newNode;
 	}
+	
+	
+	//To Print the LinkedList
 	public void show() {
 		  Node temp = head;
 	        if(temp == null) {
 	            System.out.println("LinkedList is empty");
 	        }
 	        else {
-	            while(temp.next!=null) {
-	                System.out.print(temp.data+"-->");
-	                temp = temp.next;
-	            }
-	            System.out.print(temp.data);
+				while(temp != null) {
+					System.out.print(temp.data +  "-> ");
+					temp = temp.next;
+				}
+				System.out.print("NULL");
 	        }
 	}
 
