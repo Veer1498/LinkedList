@@ -20,6 +20,7 @@ public class ListMain {
 		welcome();
 		Scanner sc = new Scanner(System.in);
 		LinkedList list = new LinkedList();
+		while(true) {
 		System.out.println("\n");
 		System.out.println("Please Select 1.Insert Data 2.Append Data");
 		int option = sc.nextInt();
@@ -39,6 +40,16 @@ public class ListMain {
 			list.show();
 
 			break;
+		case 4:
+			list.insert(70);
+		 	Node firNode = list.insert(56);
+		 	Node newNode = new Node(30);
+		 	System.out.println("Before Insertion");
+	        list.show();
+	        list.insertBetween(firNode, newNode);
+		 	System.out.println("After Insertion");
+	        list.show();
+		}
 		}
 	}
 	

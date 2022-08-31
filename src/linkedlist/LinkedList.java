@@ -19,22 +19,35 @@ public class LinkedList {
 		Node newNode = new Node(data);
 		if(head == null) {
 			head = newNode;
+			tail = newNode;
 		}
-		else{
-	         Node temp = head;  
-	         while(temp.next != null) {
-					temp = temp.next;
-				}
-				temp.next = newNode;
-			}
-			return newNode;
+		  else if(head != null){
+	            Node temp = head;
+	            while(temp.next != null) {
+	                temp = temp.next;
+	            }
+	            temp.next = newNode;
+	        }
+	        return head;
 	}
 	//To Append Data
 	public void push(int data) {
-		Node newNode = new Node(data);
-		newNode .next = head;
-		head = newNode;
+		Node newNode =new Node(data);
+		if(head == null) {
+			head = newNode;
+			tail = newNode;
+		}
+		else {
+			this.tail.next = newNode;
+			tail = newNode;
+		}
 
+	}
+	//To Insert Data Btw elements
+	public void insertBetween(Node prevNode, Node newNode) {
+		Node tempNode = prevNode.next;
+		prevNode.next = newNode;
+		newNode.next = tempNode;
 	}
 	
 	//To Print the LinkedList
@@ -45,7 +58,7 @@ public class LinkedList {
 	        }
 	        else {
 				while(temp != null) {
-					System.out.print(temp.data +  "->");
+					System.out.print(temp.data+" ");
 					temp = temp.next;
 				}
 	        }
